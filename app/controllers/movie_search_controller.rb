@@ -3,5 +3,6 @@ class MovieSearchController < ApplicationController
   end
 
   def search
+    binding.pry 
   end
 end

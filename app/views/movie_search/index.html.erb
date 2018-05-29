@@ -1,2 +1,5 @@
-<h1>MovieSearch#index</h1>
-<p>Find me in app/views/movie_search/index.html.erb</p>
+<%= form_with url: search_path, scope: :query, local: true do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <%= form.submit 'Search' %> 
+<% end %> 
