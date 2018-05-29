@@ -12,6 +12,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 
 group :development, :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'pry-byebug'
+  gem 'pry-rails'
 end
 
 group :development do
