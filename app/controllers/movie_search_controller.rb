@@ -3,6 +3,12 @@ class MovieSearchController < ApplicationController
   end
 
   def search
-    binding.pry 
+    if request.post?
+      api_key = "123445"
+      query = params[:query][:title]
+      response = Net::HTTP.get("www.omdbapi.com", "/?apikey=#{api_key}&s=#{query}")
+      @movies = JSON.parse(response)
+    end
+    render :index
   end
 end

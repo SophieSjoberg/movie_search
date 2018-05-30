@@ -3,3 +3,11 @@
     <%= form.text_field :title %>
     <%= form.submit 'Search' %> 
 <% end %> 
+
+<% unless @movies.nil? %>
+    <% @movies['Search'].each do |movie| %>
+        <h1><%=movie['Title']%></h1>
+        <img src="<%= movie["Poster"]%>" style="width=200px; height=auto;">
+
+    <% end %>
+<% end %>

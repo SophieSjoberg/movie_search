@@ -14,8 +14,10 @@ gem 'turbolinks', '~> 5'
 group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'rspec-expectations'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'webmock'
 end
 
 group :development do
